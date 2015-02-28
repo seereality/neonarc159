@@ -1,0 +1,12 @@
+<div class="container billboard light">
+<video id="video" controls="" autoplay="" name="media"><source src="" type="video/webm"></video>
+<!--button ng-click="mergeVideos()">Merge</button-->
+<button ng-click="deleteVideo()">Delete</button>
+<H1>List Of Videos</H1>
+
+<div ng-repeat="item in videos">
+  <input type="checkbox" name="selectedVideos[]" value="{{item.filename}}" ng-model="item.selected">
+  <a ng-click="playvideo(item._id)">{{item.filename}}</a>&nbsp&nbsp&nbsp
+  <a href={{rootUrl+"/videos/"+item._id}}><u>download</u></a> 
+</div>
+</div>
